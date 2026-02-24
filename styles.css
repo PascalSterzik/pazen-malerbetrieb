@@ -5,13 +5,14 @@
 
 /* 1. Reset & Base */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
     font-family: 'Nunito', sans-serif;
     color: var(--text);
     line-height: 1.7;
     background: var(--white);
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; transition: var(--transition); }
@@ -1105,121 +1106,13 @@ strong { color: var(--text); }
     animation: dripDown 1.2s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
-/* --- Paint Splashes: Leistungen section corners --- */
-.paint-splash {
-    position: absolute;
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.15;
-}
-.paint-splash svg {
-    width: 100%;
-    height: 100%;
-}
 
-/* Splash positions */
-.splash-top-left {
-    top: -20px;
-    left: -40px;
-    width: 180px;
-    height: 180px;
-    transform: rotate(-15deg);
-}
-.splash-top-right {
-    top: 30px;
-    right: -30px;
-    width: 150px;
-    height: 150px;
-    transform: rotate(25deg);
-}
-.splash-bottom-left {
-    bottom: 20px;
-    left: -20px;
-    width: 120px;
-    height: 120px;
-    transform: rotate(10deg);
-}
-.splash-bottom-right {
-    bottom: -10px;
-    right: -30px;
-    width: 160px;
-    height: 160px;
-    transform: rotate(-20deg);
-}
 
-/* Splash color variants */
-.splash-accent { color: var(--accent); }
-.splash-highlight { color: var(--highlight); }
-.splash-sky { color: var(--sky); }
-.splash-primary { color: var(--primary); }
 
-/* --- Brush Stroke Section Divider --- */
-.brush-divider {
-    position: relative;
-    height: 20px;
-    overflow: visible;
-    z-index: 2;
-    pointer-events: none;
-}
-.brush-divider svg {
-    position: absolute;
-    top: -10px;
-    left: -5%;
-    width: 110%;
-    height: 40px;
-}
-
-/* --- Paint Roller on Side (decorative accent) --- */
-.paint-accent-line {
-    position: absolute;
-    width: 4px;
-    height: 80px;
-    border-radius: 2px;
-    opacity: 0.25;
-}
-.paint-accent-line-left {
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.paint-accent-line-right {
-    right: 20px;
-    top: 40%;
-    transform: translateY(-50%);
-}
-
-/* --- Color Swatch Dots (floating near sections) --- */
-.color-dots {
-    position: absolute;
-    pointer-events: none;
-    z-index: 0;
-}
-.color-dot {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.2;
-}
-.color-dot-1 { width: 16px; height: 16px; background: var(--accent); top: 20px; left: 0; }
-.color-dot-2 { width: 12px; height: 12px; background: var(--highlight); top: 0; left: 24px; }
-.color-dot-3 { width: 10px; height: 10px; background: var(--sky); top: 28px; left: 28px; }
-.color-dot-4 { width: 14px; height: 14px; background: var(--primary); top: 10px; left: 46px; }
-
-/* Floating dots near hero */
-.hero .color-dots-hero {
-    bottom: 40px;
-    left: 40px;
-}
-/* Dots near about section */
-.section-alt .color-dots-about {
-    top: 30px;
-    right: 60px;
-}
 
 /* --- Responsive: hide decorative elements on small screens --- */
 @media (max-width: 768px) {
-    .paint-splash { display: none; }
     .paint-drip-1, .paint-drip-5, .paint-drip-7 { display: none; }
-    .color-dots { display: none; }
     .paint-drip-2 { left: 15%; }
     .paint-drip-3 { left: 35%; }
     .paint-drip-4 { left: 55%; }
@@ -1227,5 +1120,4 @@ strong { color: var(--text); }
 }
 @media (max-width: 480px) {
     .paint-drip { display: none; }
-    .brush-divider { display: none; }
 }
