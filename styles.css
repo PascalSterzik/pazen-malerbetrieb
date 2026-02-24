@@ -1110,7 +1110,7 @@ strong { color: var(--text); }
     position: absolute;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.08;
+    opacity: 0.15;
 }
 .paint-splash svg {
     width: 100%;
@@ -1175,7 +1175,7 @@ strong { color: var(--text); }
     width: 4px;
     height: 80px;
     border-radius: 2px;
-    opacity: 0.15;
+    opacity: 0.25;
 }
 .paint-accent-line-left {
     left: 20px;
@@ -1197,7 +1197,7 @@ strong { color: var(--text); }
 .color-dot {
     position: absolute;
     border-radius: 50%;
-    opacity: 0.12;
+    opacity: 0.2;
 }
 .color-dot-1 { width: 16px; height: 16px; background: var(--accent); top: 20px; left: 0; }
 .color-dot-2 { width: 12px; height: 12px; background: var(--highlight); top: 0; left: 24px; }
