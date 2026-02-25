@@ -1110,23 +1110,18 @@ strong { color: var(--text); }
 
 
 
-/* Paint Drip Separators */
-.paint-separator {
-    width: 100%;
-    line-height: 0;
-    margin: -2px 0;
-    position: relative;
-    z-index: 2;
-}
-.paint-separator-img {
+/* Paint Drip Overlays (positioned inside sections) */
+.paint-drip-overlay {
+    position: absolute;
+    left: 0;
     width: 100%;
     height: auto;
+    z-index: 3;
+    pointer-events: none;
     display: block;
-    object-fit: cover;
-    max-height: 80px;
 }
-.paint-separator-dark {
-    background: var(--light-bg);
+.paint-drip-top {
+    top: 0;
 }
 
 /* --- Responsive: hide decorative elements on small screens --- */
